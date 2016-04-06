@@ -11,3 +11,7 @@
 .buttons {
   margin-top: 20px;
 }
+
+#markO {
+  display: none;
+}

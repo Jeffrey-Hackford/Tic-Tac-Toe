@@ -13,69 +13,73 @@
       <div class="row" id="row1">
         <div class="col-xs-4" id="space1">
           <p>#1</p>
+          <span class="display1"></span>
         </div>
 
         <div class="col-xs-4" id="space2">
           <p>#2</p>
+          <span class="display2"></span>
         </div>
 
         <div class="col-xs-4" id="space3">
           <p>#3</p>
+          <span class="display3"></span>
         </div>
       </div>
 
         <div class="row" id="row2">
           <div class="col-xs-4" id="space4">
             <p>#4</p>
+            <span class="display4"></span>
           </div>
 
           <div class="col-xs-4" id="space5">
             <p>#5</p>
+            <span class="display5"></span>
           </div>
 
           <div class="col-xs-4" id="space6">
             <p>#6</p>
+            <span class="display6"></span>
           </div>
         </div>
 
           <div class="row" id="row3">
             <div class="col-xs-4" id="space7">
               <p>#7</p>
+              <span class="display7"></span>
             </div>
 
             <div class="col-xs-4" id="space8">
               <p>#8</p>
+              <span class="display8"></span>
             </div>
 
             <div class="col-xs-4" id="space9">
               <p>#9</p>
+              <span class="display9"></span>
             </div>
 
           </div>
 
-          <div class="row">
-            <div class="box-option">
-              <label for="box-option">Make your move:</label>
-                <select type="select" class="form-control" id="spaceInput">
-                  <option value="1">Box #1</option>
-                  <option value="2">Box #2</option>
-                  <option value="3">Box #3</option>
-                  <option value="4">Box #4</option>
-                  <option value="5">Box #5</option>
-                  <option value="6">Box #6</option>
-                  <option value="7">Box #7</option>
-                  <option value="8">Box #8</option>
-                  <option value="9">Box #9</option>
-                </select>
-            </div>
-          </div>
-            <form class="form-group">
-              <div class="row buttons">
-                <button class="btn btn-success">Mark X</button>
-                <button class="btn btn-danger">Mark O</button>
-                <button type="submit" class="btn btn-info" value="submit" id="submitButton">Next turn</button>
-              </div>
+          <form id="box-option">
+            <label for="box-option">Make your move:</label>
+              <select type="select" class="form-control" id="spaceInput">
+                <option value="1">Box #1</option>
+                <option value="2">Box #2</option>
+                <option value="3">Box #3</option>
+                <option value="4">Box #4</option>
+                <option value="5">Box #5</option>
+                <option value="6">Box #6</option>
+                <option value="7">Box #7</option>
+                <option value="8">Box #8</option>
+                <option value="9">Box #9</option>
+              </select>
+            <button class="btn btn-primary" type="submit" name="button" id="markX">Mark X</button>
+            <button class="btn btn-primary" type="submit" name="button" id="markO">Mark O</button>
           </form>
+
+
       </div>
   </body>
 </html>
