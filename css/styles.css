@@ -1,0 +1,13 @@
+#space1, #space2, #space3,  #space4, #space5, #space6, #space7, #space8, #space9 {
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+}
+.box-option {
+  max-width: 200px;
+  float: left;
+}
+
+.buttons {
+  margin-top: 20px;
+}
