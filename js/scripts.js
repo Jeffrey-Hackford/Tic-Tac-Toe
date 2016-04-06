@@ -29,10 +29,7 @@ $("form#box-option").submit(function(event) {
 
   var newSpaceX = new Space("X", inputtedBox);
   player1.spaces.push(newSpaceX);
-  console.log(player1.spaces);
-
-
-
+  
   if (newSpaceX.boardLocation === 1) {
     $(".display1").append("<img src='img/X.png'>");
     $(".opt1").remove();
@@ -88,30 +85,39 @@ $("form#box-option").submit(function(event) {
 
     if (newSpaceO.boardLocation === 1) {
       $(".display1").append("<img src='img/O.png'>");
+      $(".opt1").remove();
     }
     if (newSpaceO.boardLocation === 2) {
       $(".display2").append("<img src='img/O.png'>");
+      $(".opt2").remove();
     }
     if (newSpaceO.boardLocation === 3) {
       $(".display3").append("<img src='img/O.png'>");
+      $(".opt3").remove();
     }
     if (newSpaceO.boardLocation === 4) {
       $(".display4").append("<img src='img/O.png'>");
+      $(".opt4").remove();
     }
     if (newSpaceO.boardLocation === 5) {
       $(".display5").append("<img src='img/O.png'>");
+      $(".opt5").remove();
     }
     if (newSpaceO.boardLocation === 6) {
       $(".display6").append("<img src='img/O.png'>");
+      $(".opt6").remove();
     }
     if (newSpaceO.boardLocation === 7) {
       $(".display7").append("<img src='img/O.png'>");
+      $(".opt7").remove();
     }
     if (newSpaceO.boardLocation === 8) {
       $(".display8").append("<img src='img/O.png'>");
+      $(".opt8").remove();
     }
     if (newSpaceO.boardLocation === 9) {
       $(".display9").append("<img src='img/O.png'>");
+      $(".opt9").remove();
     }
 
 
