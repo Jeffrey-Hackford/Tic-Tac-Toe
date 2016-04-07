@@ -1,24 +1,38 @@
 #space1, #space2, #space3,  #space4, #space5, #space6, #space7, #space8, #space9 {
   border: 2px solid black;
-  height: 300px;
   width: 300px;
+  height: 300px;
 }
 .box-option {
   max-width: 200px;
   float: left;
 }
-
 .buttons {
   margin-top: 20px;
 }
 img {
-  width: 175px;
+  width: 225px;
+  margin-left: 3em;
 }
-
-.display1 {
+button {
+  margin-top: 10px;
+}
+#box-option {
+  width: 175px;
+  margin-top:10px;
+}
+#box-option2 {
+  width: 175px;
+  margin-top: 10px;
+  display: none;
+}
+body {
+  background: radial-gradient(white, gray, white);
+}
+.container {
+  max-width: 80%;
+  min-width: 80%;
+}
+.jumbotron {
   
 }
-
-/*#markO {
-  display: none;
-}*/

@@ -1,35 +1,43 @@
-function Player (mark) {
+function Player (mark, []) {
   this.mark = mark;
   this.spaces = [];
 }
+
 
 function Space (mark, boardLocation) {
   this.mark = mark;
   this.boardLocation = boardLocation;
 }
 
-function Game (player1, player2, turn, gameOver) {
-  this.player1 = player1;
-  this.player2 = player2;
-  this.turn = 0;
-  this.gameOver = false;
+Player.prototype.Winner = function(array, boardLocation) {
+  for (index = 0; index < array.length; index ++) {
+    if (boardLocation === 1 && boardLocation === 2 && boardLocation === 3) {
+      alert("winner");
+    }
+  }
 }
 
-
 $(document).ready(function() {
-  var player1 = new Player("X");
-  var player2 = new Player("O");
+  var player1 = new Player("X", []);
+  var player2 = new Player("O", []);
 
 //for player X ---------------------------//
 $("form#box-option").submit(function(event) {
     event.preventDefault();
 
+    $("#box-option").hide();
+    $("#box-option2").show();
 
-  var inputtedBox = parseInt($("#spaceInput :selected").val());
 
-  var newSpaceX = new Space("X", inputtedBox);
-  player1.spaces.push(newSpaceX);
-  
+    var inputtedBoxX = parseInt($("#spaceInput :selected").val());
+
+    var newSpaceX = new Space("X", inputtedBoxX);
+    player1.spaces.push(newSpaceX);
+
+    console.log("player1" + newSpaceX);
+    console.log(player1);
+
+
   if (newSpaceX.boardLocation === 1) {
     $(".display1").append("<img src='img/X.png'>");
     $(".opt1").remove();
@@ -67,9 +75,11 @@ $("form#box-option").submit(function(event) {
     $(".opt9").remove();
   }
 
-  if (newSpaceX.boardLocation === (1 && 2 && 3 || 4 && 5 && 6 || 7 && 8 && 9 || 1 && 4 && 7 || 2 && 5 && 8 || 3 && 6 && 9 || 1 && 5 && 9 || 3 && 5 && 7))  {
-    alert("winner!");
-  }
+    player1.Winner(player1.spaces, newSpaceX.inputtedBoxX);
+  // console.log("boardlocastionx" + newSpaceX.boardLocation);
+  // if (newSpaceX.boardLocation === (4 && 5 && 6))  {
+  //   alert("winner!");
+  // }
 });
 
 //for playerO ------------------------------//
@@ -77,11 +87,19 @@ $("form#box-option").submit(function(event) {
   $("form#box-option2").submit(function(event) {
       event.preventDefault();
 
-    var inputtedBox = parseInt($("#spaceInput2 :selected").val());
+      $("#box-option2").hide();
+      $("#box-option").show();
 
-    var newSpaceO = new Space("O", inputtedBox);
-    player2.spaces.push(newSpaceO);
-    console.log(player2.spaces);
+
+
+      var inputtedBoxO = parseInt($("#spaceInput2 :selected").val());
+
+      var newSpaceO = new Space("O", inputtedBoxO);
+
+      player2.spaces.push(newSpaceO);
+
+      console.log("player2" + newSpaceO);
+      console.log(player2);
 
     if (newSpaceO.boardLocation === 1) {
       $(".display1").append("<img src='img/O.png'>");
@@ -121,9 +139,9 @@ $("form#box-option").submit(function(event) {
     }
 
 
-    if (newSpaceO.boardLocation === (1 && 2 && 3 || 4 && 5 && 6 || 7 && 8 && 9 || 1 && 4 && 7 || 2 && 5 && 8 || 3 && 6 && 9 || 1 && 5 && 9 || 3 && 5 && 7))  {
-      alert("winner!");
-    }
+    // if (newSpaceO.boardLocation === (1 && 2 && 3 || 4 && 5 && 6 || 7 && 8 && 9 || 1 && 4 && 7 || 2 && 5 && 8 || 3 && 6 && 9 || 1 && 5 && 9 || 3 && 5 && 7))  {
+    //   alert("winner!");
+    // }
 
 
 
