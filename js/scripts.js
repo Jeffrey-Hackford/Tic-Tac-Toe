@@ -27,7 +27,10 @@ Player.prototype.Winner = function(player) {
       (string.includes("1") && string.includes("5") && string.includes("9")) ||
       (string.includes("3") && string.includes("5") && string.includes("7")))
         {
-    alert("Winner!!!");
+          var modal = $("#myModal")
+          modal.find('.modal-body')
+          modal.modal("show");
+          
   }
   else if (player.spaces.length === 5) {
     alert("Tie Game");
@@ -48,6 +51,7 @@ $("form#box-option").submit(function(event) {
 
     $("#box-option").hide();
     $("#box-option2").show();
+
 
 
     var inputtedBoxX = parseInt($("#spaceInput :selected").val());

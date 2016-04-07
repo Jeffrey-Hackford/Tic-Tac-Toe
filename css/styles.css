@@ -110,3 +110,9 @@ form {
 .btn-success {
   margin-left: 32.5%;
 }
+.modal-body {
+  text-align: center;
+  background: radial-gradient(#2a4596, black);
+  color: #4EDED7;
+  text-shadow: 2px -5px 8px #EBF0A8;
+}
