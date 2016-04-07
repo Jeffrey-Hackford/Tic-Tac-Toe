@@ -1,6 +1,7 @@
 function Player (mark, []) {
   this.mark = mark;
   this.spaces = [];
+  this.isWinner = false;
 }
 
 
@@ -9,11 +10,24 @@ function Space (mark, boardLocation) {
   this.boardLocation = boardLocation;
 }
 
-Player.prototype.Winner = function(array, boardLocation) {
-  for (index = 0; index < array.length; index ++) {
-    if (boardLocation === 1 && boardLocation === 2 && boardLocation === 3) {
-      alert("winner");
-    }
+Player.prototype.Winner = function(player) {
+
+  var locations = [];
+  for (index = 0; index < player.spaces.length; index ++) {
+    locations.push(player.spaces[index].boardLocation);
+  }
+  var string = locations.join();
+
+  if ((string.includes("1") && string.includes("2") && string.includes("3")) ||
+      (string.includes("4") && string.includes("5") && string.includes("6")) ||
+      (string.includes("7") && string.includes("8") && string.includes("9")) ||
+      (string.includes("1") && string.includes("4") && string.includes("7")) ||
+      (string.includes("2") && string.includes("5") && string.includes("8")) ||
+      (string.includes("3") && string.includes("6") && string.includes("9")) ||
+      (string.includes("1") && string.includes("5") && string.includes("9")) ||
+      (string.includes("3") && string.includes("5") && string.includes("7")))
+        {
+    alert("Winner!!!");
   }
 }
 
@@ -75,7 +89,7 @@ $("form#box-option").submit(function(event) {
     $(".opt9").remove();
   }
 
-    player1.Winner(player1.spaces, newSpaceX.inputtedBoxX);
+    player1.Winner(player1);
   // console.log("boardlocastionx" + newSpaceX.boardLocation);
   // if (newSpaceX.boardLocation === (4 && 5 && 6))  {
   //   alert("winner!");
@@ -138,12 +152,6 @@ $("form#box-option").submit(function(event) {
       $(".opt9").remove();
     }
 
-
-    // if (newSpaceO.boardLocation === (1 && 2 && 3 || 4 && 5 && 6 || 7 && 8 && 9 || 1 && 4 && 7 || 2 && 5 && 8 || 3 && 6 && 9 || 1 && 5 && 9 || 3 && 5 && 7))  {
-    //   alert("winner!");
-    // }
-
-
-
+    player2.Winner(player2)
   });
 });
