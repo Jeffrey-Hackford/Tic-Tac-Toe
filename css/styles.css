@@ -1,8 +1,64 @@
-#space1, #space2, #space3,  #space4, #space5, #space6, #space7, #space8, #space9 {
-  border: 2px solid black;
+#space1 {
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
   width: 300px;
   height: 300px;
 }
+#space2 {
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space3 {
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space4 {
+  border-right: 2px solid gray;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space5 {
+  border: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space6 {
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space7 {
+  border-right: 2px solid gray;
+  border-top: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space8 {
+  border-right: 2px solid gray;
+  border-left: 2px solid gray;
+  border-top: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+#space9 {
+  border-left: 2px solid gray;
+  border-top: 2px solid gray;
+  width: 300px;
+  height: 300px;
+}
+.label {
+  color: #4EDED7;
+  text-shadow: 2px -2px 8px #EBF0A8;
+  }
 .box-option {
   max-width: 200px;
   float: left;
@@ -12,7 +68,7 @@
 }
 img {
   width: 225px;
-  margin-left: 3em;
+  margin-left: 2em;
 }
 button {
   margin-top: 10px;
@@ -27,15 +83,30 @@ button {
   display: none;
 }
 body {
-  background: radial-gradient(white, gray, white);
+  background: radial-gradient(#2a4596, black);
+  margin-bottom: 50px;
 }
 .container {
-  max-width: 80%;
-  min-width: 80%;
+  margin-left: 30%;
 }
 .jumbotron {
-  text-align: center;
-  font-size: 3em;
+  margin-left: 16%;
+  font-size: 5em;
   font-weight: bolder;
-  
+  font-family: Papyrus;
+  color: #34D607;
+  text-shadow: 2px -5px 8px #EBF0A8;
+}
+p {
+  font-family: Papyrus;
+  color: #4EDED7;
+  text-shadow: 2px -5px 8px #EBF0A8;
+}
+form {
+  text-align: center;
+  margin-left: 30%;
+}
+
+.btn-success {
+  margin-left: 32.5%;
 }

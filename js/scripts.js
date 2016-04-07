@@ -29,11 +29,18 @@ Player.prototype.Winner = function(player) {
         {
     alert("Winner!!!");
   }
+  else if (player.spaces.length === 5) {
+    alert("Tie Game");
+  }
 }
 
 $(document).ready(function() {
   var player1 = new Player("X", []);
   var player2 = new Player("O", []);
+
+  $(".btn-success").click(function() {
+    window.location.reload()
+  });
 
 //for player X ---------------------------//
 $("form#box-option").submit(function(event) {
@@ -47,10 +54,6 @@ $("form#box-option").submit(function(event) {
 
     var newSpaceX = new Space("X", inputtedBoxX);
     player1.spaces.push(newSpaceX);
-
-    console.log("player1" + newSpaceX);
-    console.log(player1);
-
 
   if (newSpaceX.boardLocation === 1) {
     $(".display1").append("<img src='img/X.png'>");
@@ -90,10 +93,7 @@ $("form#box-option").submit(function(event) {
   }
 
     player1.Winner(player1);
-  // console.log("boardlocastionx" + newSpaceX.boardLocation);
-  // if (newSpaceX.boardLocation === (4 && 5 && 6))  {
-  //   alert("winner!");
-  // }
+
 });
 
 //for playerO ------------------------------//
@@ -104,16 +104,11 @@ $("form#box-option").submit(function(event) {
       $("#box-option2").hide();
       $("#box-option").show();
 
-
-
       var inputtedBoxO = parseInt($("#spaceInput2 :selected").val());
 
       var newSpaceO = new Space("O", inputtedBoxO);
 
       player2.spaces.push(newSpaceO);
-
-      console.log("player2" + newSpaceO);
-      console.log(player2);
 
     if (newSpaceO.boardLocation === 1) {
       $(".display1").append("<img src='img/O.png'>");
@@ -153,5 +148,6 @@ $("form#box-option").submit(function(event) {
     }
 
     player2.Winner(player2)
+
   });
 });
